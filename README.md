@@ -1,6 +1,6 @@
-# vite-react-ts-tailwind-starter
+# Jacks React Playground
 
-Starter using Vite + React + TypeScript + Tailwind.
+A playground using Vite + React + TypeScript + Tailwind.
 
 ## Motivation
 
