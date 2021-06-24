@@ -4,7 +4,7 @@ import TrafficLight from './components/TrafficLight'
 import GlobalLayout from './layouts/GlobalLayout'
 import Home from './pages/home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import NavBar from './components/NavBar'
+import NavBar from './components/navigation/NavBar'
 import './styles/app.css'
 
 const App = () => {
