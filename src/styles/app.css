@@ -1,0 +1,51 @@
+.profile-menu {
+  opacity: 0;
+}
+
+.profile-menu.menu-transition-enter {
+  opacity: 0;
+}
+
+.profile-menu.menu-transition-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.profile-menu.menu-transition-exit {
+  opacity: 1;
+}
+
+.profile-menu.menu-transition-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.profile-menu.menu-transition-enter-done {
+  opacity: 1;
+}
+
+.settings-menu {
+  opacity: 0;
+}
+
+.settings-menu.menu-transition-enter {
+  opacity: 0;
+}
+
+.settings-menu.menu-transition-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.settings-menu.menu-transition-exit {
+  opacity: 1;
+}
+
+.settings-menu.menu-transition-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.settings-menu.menu-transition-enter-done {
+  opacity: 1;
+}

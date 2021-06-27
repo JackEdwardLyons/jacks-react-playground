@@ -23,18 +23,6 @@ const StyledTrafficLight = styled.div`
     opacity: 0.5;
   }
 
-  .yellow {
-    background-color: #ffff00;
-  }
-
-  .green {
-    background-color: #4cbb17;
-  }
-
-  .red {
-    background-color: #e60000;
-  }
-
   input[type='radio'] {
     appearance: none;
   }
@@ -90,9 +78,14 @@ const TrafficLight: React.FC = () => {
       <StyledTrafficLight>
         <div className="pole" />
         <div className="traffic-light">
-          <input type="radio" readOnly className="light red" checked={currentState.matches({ ON: 'red' })} />
-          <input type="radio" readOnly className="light yellow" checked={currentState.matches({ ON: 'yellow' })} />
-          <input type="radio" readOnly className="light green" checked={currentState.matches({ ON: 'green' })} />
+          <input type="radio" readOnly className="light bg-red-500" checked={currentState.matches({ ON: 'red' })} />
+          <input
+            type="radio"
+            readOnly
+            className="light bg-yellow-500"
+            checked={currentState.matches({ ON: 'yellow' })}
+          />
+          <input type="radio" readOnly className="light bg-green-500" checked={currentState.matches({ ON: 'green' })} />
           {currentState.value !== 'OFF' && (
             <button className="bg-white px-2" onClick={() => send('NEXT')}>
               NEXT
