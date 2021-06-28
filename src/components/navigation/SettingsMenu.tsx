@@ -10,7 +10,7 @@ export default function SettingsMenu({ setOpenMenu, goToMenu }: { goToMenu: stri
   const [darkMode, setDarkMode] = useRecoilState(darkModeAtom)
 
   return (
-    <ul className="absolute dark:bg-black dark:text-white bg-white text-black text-blackshadow-md top-[110%] right-0 p-4 border-t-2 rounded-md cursor-pointer">
+    <ul className="dark:bg-black dark:text-white bg-white text-black text-blackshadow-md top-[110%] right-0 p-4 border-t-2 rounded-md cursor-pointer">
       <li className="border-b-2 mb-2 pb-2">
         <div className="flex flex-col">
           <span onClick={() => goToMenu && setOpenMenu(goToMenu)}>&larr; Go back here</span>
@@ -18,7 +18,7 @@ export default function SettingsMenu({ setOpenMenu, goToMenu }: { goToMenu: stri
         </div>
       </li>
       <li>
-        <input type="checkbox" onClick={e => setDarkMode(e.currentTarget.checked)} />{' '}
+        <input type="checkbox" onClick={e => setDarkMode(e.currentTarget.checked)} checked={darkMode} />{' '}
         <span>Dark mode: {darkMode ? '✅' : '❌'}</span>
       </li>
     </ul>

@@ -1,7 +1,6 @@
 import React from 'react'
 import NavRoutes from './NavRoutes'
 import SettingsNav from './SettingsNav'
-import GlobalLayout from '../../layouts/GlobalLayout'
 
 function NavBar() {
   return (

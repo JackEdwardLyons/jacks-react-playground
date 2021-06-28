@@ -2,11 +2,12 @@ import React from 'react'
 import { RecoilRoot } from 'recoil'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/home'
-import DadJoke from './components/DadJoke'
+import DadJoke from './pages/dad-jokes'
 import GlobalLayout from './layouts/GlobalLayout'
 import NavBar from './components/navigation/NavBar'
-import TrafficLight from './components/TrafficLight'
+import TrafficLight from './pages/traffic-lights'
 import DarkModeLayout from './layouts/DarkModeLayout'
+import ReactTransitionGroup from './pages/react-transition-group'
 import './styles/app.css'
 
 const App = () => {
@@ -15,19 +16,22 @@ const App = () => {
       <DarkModeLayout>
         <Router>
           <NavBar />
-          <Switch>
-            <GlobalLayout>
+          <GlobalLayout>
+            <Switch>
               <Route path="/dad-jokes">
                 <DadJoke />
               </Route>
               <Route path="/traffic-lights">
                 <TrafficLight />
               </Route>
+              <Route path="/transitions">
+                <ReactTransitionGroup />
+              </Route>
               <Route path="/">
                 <Home />
               </Route>
-            </GlobalLayout>
-          </Switch>
+            </Switch>
+          </GlobalLayout>
         </Router>
       </DarkModeLayout>
     </RecoilRoot>

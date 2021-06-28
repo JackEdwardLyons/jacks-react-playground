@@ -1,24 +1,56 @@
-.profile-menu,
-.settings-menu,
-.profile-menu.menu-transition-enter,
-.profile-menu.menu-transition-exit-active,
-.settings-menu.menu-transition-enter,
-.settings-menu.menu-transition-exit-active {
-  opacity: 0;
+:root {
+  --bg: #242526;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 500ms;
 }
 
-.profile-menu.menu-transition-exit,
-.profile-menu.menu-transition-enter-done,
-.profile-menu.menu-transition-enter-active,
-.settings-menu.menu-transition-exit,
-.settings-menu.menu-transition-enter-done,
-.settings-menu.menu-transition-enter-active {
-  opacity: 1;
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: -130px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 0;
+  overflow: hidden;
+  transition: height var(--speed) ease;
 }
 
-.profile-menu.menu-transition-enter-active,
-.profile-menu.menu-transition-exit-active,
-.settings-menu.menu-transition-enter-active,
-.settings-menu.menu-transition-exit-active {
-  transition: opacity 200ms;
+/* CSSTransition classes  */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-primary-exit {
+  position: absolute;
+}
+
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
 }

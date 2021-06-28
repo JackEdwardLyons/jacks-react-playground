@@ -21,6 +21,7 @@ function SettingsNav() {
   const toggleProfileNav = () => {
     if (openMenu) {
       setOpenMenu('')
+      setMenuHeight(0)
     } else {
       openNavItem('profile')
     }
@@ -60,15 +61,23 @@ function SettingsNav() {
           <BsCaretDownFill color="#050505" size="1.5rem" title="Profile" />
         </SettingsNavItem>
 
-        <div style={{ height: menuHeight }} ref={dropdownRef}>
+        <div
+          className="dropdown"
+          style={{
+            height: menuHeight,
+            border: openMenu ? '1px solid #474a4d' : '1px solid white',
+            background: openMenu ? '#fff' : '#fff',
+          }}
+          ref={dropdownRef}
+        >
           <CSSTransition
             in={openMenu === 'profile'}
             timeout={200}
-            classNames="menu-transition"
+            classNames="menu-primary"
             onEnter={calcHeight}
             unmountOnExit
           >
-            <div className="profile-menu">
+            <div className="menu">
               <ProfileMenu goToMenu="settings" setOpenMenu={setOpenMenu} />
             </div>
           </CSSTransition>
@@ -76,11 +85,11 @@ function SettingsNav() {
           <CSSTransition
             in={openMenu === 'settings'}
             timeout={200}
-            classNames="menu-transition"
+            classNames="menu-secondary"
             onEnter={calcHeight}
             unmountOnExit
           >
-            <div className="settings-menu">
+            <div className="menu">
               <SettingsMenu goToMenu="profile" setOpenMenu={setOpenMenu} />
             </div>
           </CSSTransition>

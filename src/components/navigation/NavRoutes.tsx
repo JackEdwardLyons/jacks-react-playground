@@ -15,6 +15,9 @@ function NavRoutes() {
           <li>
             <Link to="/traffic-lights">Traffic Lights with x state</Link>
           </li>
+          <li>
+            <Link to="/transitions">Transitions</Link>
+          </li>
         </ul>
       </nav>
     </div>
