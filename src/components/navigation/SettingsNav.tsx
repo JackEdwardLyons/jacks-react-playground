@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from 'react'
 import { FaBell } from 'react-icons/fa'
 import { BiMessageRoundedMinus, BiCog } from 'react-icons/bi'
 import { BsCaretDownFill } from 'react-icons/bs'
-import NavSettingItem from './NavSettingItem'
+import SettingsNavItem from './SettingsNavItem'
 import ProfileMenu from './ProfileMenu'
 import SettingsMenu from './SettingsMenu'
 import { CSSTransition } from 'react-transition-group'
 
-function NavSettings() {
+function SettingsNav() {
   const [openMenu, setOpenMenu] = useState('')
   const [menuHeight, setMenuHeight] = useState(0)
   const dropdownRef = useRef(null)
@@ -16,6 +16,14 @@ function NavSettings() {
     setOpenMenu(prevVal => {
       return navValue === prevVal ? '' : navValue
     })
+  }
+
+  const toggleProfileNav = () => {
+    if (openMenu) {
+      setOpenMenu('')
+    } else {
+      openNavItem('profile')
+    }
   }
 
   function calcHeight(el: HTMLElement) {
@@ -32,25 +40,25 @@ function NavSettings() {
   return (
     <nav className="flex items-center">
       <ul className="flex gap-4 relative">
-        <NavSettingItem>
+        <SettingsNavItem>
           <BiMessageRoundedMinus color="#050505" size="1.5rem" title="Messages" />
-        </NavSettingItem>
+        </SettingsNavItem>
 
-        <NavSettingItem>
+        <SettingsNavItem>
           <FaBell color="#050505" size="1.5rem" title="Notifications" />
-        </NavSettingItem>
+        </SettingsNavItem>
 
-        <NavSettingItem>
+        <SettingsNavItem>
           <BiCog color="#050505" size="1.5rem" title="Settings" />
-        </NavSettingItem>
+        </SettingsNavItem>
 
-        <NavSettingItem
+        <SettingsNavItem
           onClick={() => {
-            openNavItem('profile')
+            toggleProfileNav()
           }}
         >
           <BsCaretDownFill color="#050505" size="1.5rem" title="Profile" />
-        </NavSettingItem>
+        </SettingsNavItem>
 
         <div style={{ height: menuHeight }} ref={dropdownRef}>
           <CSSTransition
@@ -82,4 +90,4 @@ function NavSettings() {
   )
 }
 
-export default NavSettings
+export default SettingsNav

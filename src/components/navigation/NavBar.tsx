@@ -1,12 +1,13 @@
 import React from 'react'
 import NavRoutes from './NavRoutes'
-import NavSettings from './NavSettings'
+import SettingsNav from './SettingsNav'
+import GlobalLayout from '../../layouts/GlobalLayout'
 
 function NavBar() {
   return (
     <div className="flex justify-between p-4">
       <NavRoutes />
-      <NavSettings />
+      <SettingsNav />
     </div>
   )
 }

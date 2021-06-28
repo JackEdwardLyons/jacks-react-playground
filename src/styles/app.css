@@ -1,51 +1,24 @@
-.profile-menu {
-  opacity: 0;
-}
-
-.profile-menu.menu-transition-enter {
-  opacity: 0;
-}
-
-.profile-menu.menu-transition-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.profile-menu.menu-transition-exit {
-  opacity: 1;
-}
-
-.profile-menu.menu-transition-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
-}
-
-.profile-menu.menu-transition-enter-done {
-  opacity: 1;
-}
-
-.settings-menu {
-  opacity: 0;
-}
-
-.settings-menu.menu-transition-enter {
-  opacity: 0;
-}
-
-.settings-menu.menu-transition-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.settings-menu.menu-transition-exit {
-  opacity: 1;
-}
-
+.profile-menu,
+.settings-menu,
+.profile-menu.menu-transition-enter,
+.profile-menu.menu-transition-exit-active,
+.settings-menu.menu-transition-enter,
 .settings-menu.menu-transition-exit-active {
   opacity: 0;
-  transition: opacity 200ms;
 }
 
-.settings-menu.menu-transition-enter-done {
+.profile-menu.menu-transition-exit,
+.profile-menu.menu-transition-enter-done,
+.profile-menu.menu-transition-enter-active,
+.settings-menu.menu-transition-exit,
+.settings-menu.menu-transition-enter-done,
+.settings-menu.menu-transition-enter-active {
   opacity: 1;
+}
+
+.profile-menu.menu-transition-enter-active,
+.profile-menu.menu-transition-exit-active,
+.settings-menu.menu-transition-enter-active,
+.settings-menu.menu-transition-exit-active {
+  transition: opacity 200ms;
 }
