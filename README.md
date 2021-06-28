@@ -1,19 +1,28 @@
 # Jacks React Playground
 
-A playground using Vite + React + TypeScript + Tailwind.
+A playground using Vite + React + TypeScript + TailwindCSS.
 
 ## Motivation
 
-Improve building your faster prototyping by using Vite, TypeScript, React, TailwindCSS.
+I'm always looking to improve as a developer and this playground is a way for me to try out new technology. The plan here is to continually build upon this playground so it's a fully-featured site with a bunch of cool stuff to play around with. Right now I am interested in:
 
-## Vite
+- Modern state management solutions such as [Recoil](https://recoiljs.org/), [Overmind](https://overmindjs.org/), [XState](https://xstate.js.org/docs/packages/xstate-react/#quick-start)...
+- [TailwindCSS](tailwindcss.com/)
+- React with TypeScript
+- SVG and Canvas
+- Fun and interesting APIs
+
+
+## Tools I am using
+
+### Vite
 
 [Vite](https://github.com/vitejs/vite) is a fast frontend build tool. According to the [README](https://github.com/vitejs/vite/blob/main/README.md), it consists of two major parts:
 
 - A dev server that serves your source files over native ES modules, with rich built-in features and astonishingly fast Hot Module Replacement (HMR).
 - A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
 
-## React
+### React
 
 [React](https://github.com/facebook/react) is a JavaScript library for building user interfaces.
 
@@ -21,13 +30,13 @@ Due to its awesome renderer system, there are many [React Renderor](https://gith
 
 Let's dive into React and Vite can use with React.
 
-## TypeScript
+### TypeScript
 
 [TypeScript](https://github.com/microsoft/TypeScript) is a superset of JavaScript. It is just one of NPM library, but it provides an original compiler.
 
 When you use TypeScript with React, you can write JSX with TypeScript, called TSX. Then you can develop views written by  **Type-Safe** template.
 
-## Tailwind CSS
+### Tailwind CSS
 
 [Tailwind CSS](https://tailwindcss.com/) is modern utility-first CSS framework. It provides many CSS rules, but these are purged when production builds. So developers do not worry about CSS asset size for performance optimization.
 
@@ -38,14 +47,10 @@ Additionally, CSS architecture is difficult about scoping, e.g. BEM, FLOCSS.
 
 When you decide to use Tailwind, you only write utility-first CSS classes, you don't have to worry about them!
 
-## Formatter and Linter
+### Formatter and Linter
 
 Already set up [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/). You can customize the rules.
 
 NOTICE: The template does not use [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) and [prettier-eslint](https://github.com/prettier/prettier-eslint). So I recommend that running commands individually. e.g. `prettier && eslint`.
 
 Please read: https://prettier.io/docs/en/integrating-with-linters.html.
-
-# ToDo
-
-- [x] install and set up [TailwindCSS/JIT](https://github.com/tailwindlabs/tailwindcss-jit) see this [PR](https://github.com/TeXmeijin/vite-react-ts-tailwind-starter/pull/1)
